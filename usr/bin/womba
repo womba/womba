@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ !  "$(whoami)" = "root" ]
+then
+	echo "Please run as root"
+else
+
+	echo 
+	echo Installing $1	
+	echo
+	git clone https://github.com/womba/$1 /tmp/$1
+	cp -R /tmp/$1/* /
+	rm -R /tmp/$1
+        echo ---------------            
+	echo Installation of $1 complete
+	echo ---------------
+	echo
+fi
+
+exit
