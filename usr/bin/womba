@@ -8,7 +8,7 @@ else
 	echo 
 	echo Installing $1	
 	echo
-	git clone https://github.com/womba/$1 /tmp/$1
+	git clone https://github.com/womba/$1 /tmp/$1  -b testing
 	cp -R /tmp/$1/* /
 	rm -R /tmp/$1
         echo ---------------            
